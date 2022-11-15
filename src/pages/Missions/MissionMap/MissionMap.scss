@@ -1,0 +1,124 @@
+@import '/src/styles/variables';
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.mapboxgl-map {
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+// .mapboxgl-ctrl-attrib-inner {
+//   display: none;
+// }
+
+// .mapboxgl-control-container {
+//   display: none;
+// }
+
+.overlay {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
+
+.overlay button {
+  background-color: #3386c0;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.overlay button:hover {
+  background-color: #4ea0da;
+}
+
+.marker {
+  background-image: url('../../../assets/images/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: $font;
+}
+
+.map-waypoint {
+  color: $pin-color;
+  cursor: pointer;
+}
+
+.popup-title {
+  float: left;
+  font-weight: $font-weight-demibold;
+}
+
+.coordinate-title {
+  float: left;
+  color: $pin-color;
+  font-weight: $font-weight-demibold;
+}
+
+.coordinate-item {
+  float: right;
+  color: grey;
+  font-weight: $font-weight-demibold;
+}
+
+.color-grey {
+  color: grey;
+}
+
+.waypoint-info-input {
+  float: right;
+  width: 125px !important;
+  margin-top: 10px !important;
+  height: 30px !important;
+}
+
+.coordinate-box {
+  margin-top: 10px;
+}
+
+.kKNoTo {
+  margin: 10px auto 0 auto;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.edit-icon {
+  display: flex;
+  align-items: center;
+  gap: $spacing-008;
+  padding-left: $spacing-008;
+  color: #3d5af1;
+}
+
+.edit-icon:hover {
+  cursor: pointer;
+}

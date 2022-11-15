@@ -1,0 +1,14 @@
+@import '../../../../styles/variables';
+
+.Clock {
+  margin: auto;
+  display: flex;
+
+  h3 {
+    width: fit-content;
+    margin: auto;
+    color: #646464;
+    font-size: $font-small;
+    line-height: 1;
+  }
+}

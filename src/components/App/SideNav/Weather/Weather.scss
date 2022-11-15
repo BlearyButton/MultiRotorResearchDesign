@@ -1,0 +1,109 @@
+@import '../../../../styles/variables';
+
+.Weather {
+  color: #9a9a9a;
+  margin: auto;
+  font-size: 18px;
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+
+  .Weather__tooltip {
+    color: $black;
+    padding: 20px;
+
+    .Weather__tooltip__content {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      .weather-icon {
+        margin-right: 10px;
+        font-size: calc($font-h1 - 7px);
+
+        &.moon {
+          color: #ffa500;
+        }
+
+        &.sun {
+          color: #ffdd00;
+        }
+
+        &.clouds-sun {
+          color: #ffdd00;
+
+          .fa-primary {
+            color: #808080;
+          }
+        }
+
+        &.clouds-moon {
+          color: #808080;
+
+          .fa-secondary {
+            color: #ffa500;
+          }
+        }
+
+        &.cloud {
+          color: #d3d3d3;
+        }
+
+        &.clouds {
+          color: #d3d3d3;
+
+          .fa-primary {
+            color: #808080;
+          }
+        }
+
+        &.cloud-drizzle {
+          color: #add8e6;
+
+          .fa-primary {
+            color: #808080;
+          }
+        }
+
+        &.cloud-bolt {
+          color: #808080;
+
+          .fa-secondary {
+            color: #ffa500;
+          }
+        }
+
+        &.snowflake {
+          color: #add8e6;
+        }
+
+        &.cloud-fog {
+          color: #808080;
+
+          .fa-secondary {
+            color: #add8e6;
+          }
+        }
+      }
+
+      h1 {
+        font-weight: 700;
+
+        em {
+          font-weight: 400;
+          font-size: $font-h3;
+        }
+      }
+    }
+
+    p {
+      margin-top: 10px;
+
+      em {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import 'src/styles/variables';
+
+.Notifications {
+  display: grid;
+  max-width: 100%;
+  overflow: auto;
+  height: fit-content;
+  max-height: 100%;
+  padding: 0 $spacing-032;
+  @include scrollbar;
+}

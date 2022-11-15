@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+.NotificationsBell {
+  color: #9a9a9a;
+  margin: auto;
+  font-size: 18px;
+  position: relative;
+  svg {
+    cursor: pointer;
+  }
+  .messages {
+    width: 350px;
+    max-width: calc(100vw - 130px);
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

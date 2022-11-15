@@ -1,0 +1,120 @@
+@import '../styles/variables';
+
+.page {
+  height: 100%;
+}
+
+.cards-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: $spacing-012;
+  max-width: 100%;
+  overflow-y: auto;
+
+  .card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #707071;
+}
+
+.map-overlay-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 300px;
+  max-height: 100%;
+  display: grid;
+  height: fit-content;
+  grid-template-rows: auto 1fr;
+  padding: $spacing-048 0 66px $spacing-048;
+
+  .heading {
+    display: flex;
+    gap: $spacing-016;
+    align-items: center;
+    margin-bottom: $spacing-048;
+    svg {
+      font-size: 25px;
+    }
+  }
+
+  .map-heading {
+    display: flex;
+    gap: $spacing-016;
+    align-items: center;
+    margin-bottom: $spacing-048;
+    background-color: white;
+
+    border: none;
+    padding: $spacing-004 $spacing-024;
+    border-radius: $border-radius-5;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.map-overlay-right {
+  position: absolute;
+  right: 0;
+  top: calc($spacing-048 + 30px + $spacing-048);
+  padding: 0 $spacing-048 $spacing-048 0;
+}
+
+.map-overlay-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 $spacing-048 36px 0;
+
+  .map-layer {
+    color: black;
+    background-color: $white;
+    border-color: white;
+    padding: 3px;
+    width: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.__dumi-default-previewer-actions button[role='change-jsx'] {
+  background-position: 0 !important;
+}
+
+.white-text {
+  color: white;
+}
+
+.green {
+  background-color: $green !important;
+}

@@ -1,0 +1,162 @@
+@import '../../../styles/variables';
+
+.word-break-all {
+  word-break: break-all !important;
+}
+
+.card {
+  background-color: $white;
+  padding: 20px;
+  border-radius: $border-radius-10;
+  border: 1px solid $light-gray;
+  max-width: 100%;
+  display: grid;
+  gap: $spacing-024;
+
+  .top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: $spacing-012;
+    position: relative;
+
+    .edit-icon {
+      display: flex;
+      align-items: center;
+      gap: $spacing-008;
+      padding-left: $spacing-008;
+      color: #3d5af1;
+    }
+
+    .edit-icon:hover {
+      cursor: pointer;
+    }
+
+    .border-left {
+      width: 3px;
+      height: 100%;
+      margin-left: -20px;
+      border-top-right-radius: 999px;
+      border-bottom-right-radius: 999px;
+      position: absolute;
+      left: 0;
+      background: #3d5af1;
+    }
+
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+
+    .name {
+      font-weight: $font-weight-demibold;
+      font-size: $font-large;
+      float: left;
+    }
+
+    .icon {
+      background-color: $black;
+      color: $white;
+      height: 15px;
+      width: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 999px;
+      font-size: $font-small;
+      font-weight: $font-weight-demibold;
+    }
+
+    .route {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: auto;
+    gap: $spacing-016;
+
+    .icon-text {
+      display: grid;
+      gap: $spacing-008;
+
+      p {
+        font-size: $font-small;
+      }
+    }
+
+    .altitude {
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: $spacing-004;
+
+      .title {
+        display: flex;
+        font-weight: $font-weight-demibold;
+        font-size: $font-small;
+      }
+
+      .height {
+        display: flex;
+        font-size: $font-normal;
+        font-weight: $font-weight-demibold;
+        color: #3d5af1;
+      }
+    }
+
+    .waypoints {
+      display: grid;
+      grid-template-columns: auto;
+      font-size: $font-normal;
+      row-gap: $spacing-008;
+      color: #5a5a5a;
+      cursor: pointer;
+
+      .item {
+        display: flex;
+        position: relative;
+
+        .active {
+          font-weight: $font-weight-demibold;
+          color: #3d5af1;
+        }
+
+        .red {
+          color: red;
+        }
+
+        .right {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .circle {
+        color: #3d5af1;
+        margin-right: 20px;
+        width: 10px;
+        height: auto;
+        position: relative;
+
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.action-gap {
+  display: grid;
+  gap: $spacing-012;
+}

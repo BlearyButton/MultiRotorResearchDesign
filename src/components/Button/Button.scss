@@ -1,0 +1,41 @@
+@import 'src/styles/variables';
+
+.button {
+  background-color: $blue;
+  border: none;
+  color: white;
+  padding: $spacing-004 $spacing-024;
+  border-radius: $border-radius-5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.fullwidth {
+    width: 100%;
+  }
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.outlined-blue {
+    border: 1px solid $blue;
+    color: $blue;
+    background-color: $white;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &.add-mission {
+    color: black;
+    background-color: $white;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  }
+}
