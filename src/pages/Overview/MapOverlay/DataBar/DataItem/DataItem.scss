@@ -1,16 +1,24 @@
 @import 'src/styles/variables';
 
 .data-item {
-  display: grid;
-  grid-template-columns: 18px 1fr;
-  gap: $spacing-012;
-  .left {
-  }
-  .right {
-    display: grid;
-    gap: $spacing-004;
+  .top {
     .title {
-      font-weight: $font-weight-demibold;
+      font-size: 10px;
+    }
+  }
+  .bottom {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: $spacing-004;
+    .icon {
+      font-size: 24px;
+      color: $blue;
+    }
+    .dataText {
+      display: inline-block;
+      font-weight: 500;
+      vertical-align: middle;
+      line-height: 30px;
     }
   }
 }

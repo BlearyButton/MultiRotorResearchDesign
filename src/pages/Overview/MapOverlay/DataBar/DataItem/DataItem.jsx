@@ -4,12 +4,14 @@ import './DataItem.scss';
 export default function DataItem({ icon, title, data, dataUnit }) {
   return (
     <div className="data-item">
-      <div className="left">{icon}</div>
-      <div className="right">
+      <div className="top">
         <p className="title">
           {title} ({dataUnit})
         </p>
-        <p>{data}</p>
+      </div>
+      <div className="bottom">
+        <p className="icon">{icon}</p>
+        <p className="dataText">{data}</p>
       </div>
     </div>
   );

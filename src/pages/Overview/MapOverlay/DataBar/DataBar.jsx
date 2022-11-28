@@ -8,7 +8,6 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 // Import components
 import StatusIndicator from '../../../../components/StatusIndicator/StatusIndicator';
 import DataItem from './DataItem/DataItem';
-import CoordinatesBox from './CoordinatesBox/CoordinatesBox';
 import Button from '../../../../components/Button/Button';
 
 export default function DataBar({ realTimeData, number = 1, status = 'online' }) {
@@ -22,43 +21,31 @@ export default function DataBar({ realTimeData, number = 1, status = 'online' })
     },
     {
       id: 2,
-      icon: <FontAwesomeIcon icon={regular('timer')} />,
+      icon: <FontAwesomeIcon icon={regular('gauge')} />,
       title: 'Speed',
       data: realTimeData ? (realTimeData.cu ? realTimeData.cu : 'Unknown') : 'Unknown',
       dataUnit: 'km/h',
     },
     {
       id: 3,
-      icon: <FontAwesomeIcon icon={regular('compass')} />,
-      title: 'Heading',
+      icon: <FontAwesomeIcon icon={regular('timer')} />,
+      title: 'Time left',
+      data: realTimeData ? (realTimeData.cu ? realTimeData.cu : 'Unknown') : 'Unknown',
+      dataUnit: 'min',
+    },
+    {
+      id: 4,
+      icon: <FontAwesomeIcon icon={regular('road-circle-check')} />,
+      title: 'Covered distance',
       data: realTimeData ? (realTimeData.cu ? realTimeData.cu : 'Unknown') : 'Unknown',
       dataUnit: 'm',
     },
     {
-      id: 4,
-      icon: <FontAwesomeIcon icon={regular('gauge-high')} />,
-      title: 'Velocity X',
-      data: realTimeData ? (realTimeData.vx ? realTimeData.cu : 'Unknown') : 'Unknown',
-      dataUnit: 'm/s',
-    },
-    {
       id: 5,
-      icon: <FontAwesomeIcon icon={regular('gauge-high')} />,
-      title: 'Velocity Y',
-      data: realTimeData ? (realTimeData.vy ? realTimeData.cu : 'Unknown') : 'Unknown',
-      dataUnit: 'm/s',
-    },
-    {
-      id: 6,
-      icon: <FontAwesomeIcon icon={regular('gauge-high')} />,
-      title: 'Velocity Z',
-      data: realTimeData ? (realTimeData.vz ? realTimeData.cu : 'Unknown') : 'Unknown',
-      dataUnit: 'm/s',
-    },
-    {
-      id: 7,
-      icon: <FontAwesomeIcon icon={regular('map-pin')} />,
-      title: 'Coordinates',
+      icon: <FontAwesomeIcon icon={regular('house')} />,
+      title: 'Distance from home',
+      data: realTimeData ? (realTimeData.cu ? realTimeData.cu : 'Unknown') : 'Unknown',
+      dataUnit: 'm',
     },
   ];
 
@@ -69,13 +56,12 @@ export default function DataBar({ realTimeData, number = 1, status = 'online' })
         <p className="name">Drone</p>
         <p className="icon">{number}</p>
         <StatusIndicator number={2} status={status} />
-        <p className="route">Inspection round 1</p>
+        <p className="route">Grass field</p>
       </div>
       <div className="bottom">
         {data.map((item) => (
           <DataItem key={item.id} icon={item.icon} title={item.title} data={item.data} dataUnit={item.dataUnit} />
         ))}
-        <CoordinatesBox lat={realTimeData?.la} long={realTimeData?.lo} alt={realTimeData?.al} />
         <Button classNames="outlined fullwidth">More data</Button>
       </div>
     </div>

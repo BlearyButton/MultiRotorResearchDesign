@@ -1,5 +1,5 @@
 import axios from 'axios';
-import CustomHistory from '../custom/CustomHistory';
+// import CustomHistory from '../custom/CustomHistory';
 import TokenService from './token.service';
 
 const instance = axios.create({
@@ -24,23 +24,23 @@ instance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-if (!TokenService.getLocalAccessToken() && window.location.pathname !== '/login') {
-  CustomHistory.replace('/login');
-  CustomHistory.go(0);
-}
+// if (!TokenService.getLocalAccessToken() && window.location.pathname !== '/login') {
+//   CustomHistory.replace('/login');
+//   CustomHistory.go(0);
+// }
 
-instance.interceptors.response.use(
-  (res) => res,
-  async (err) => {
-    if (err.response) {
-      // Access Token was expired
-      if (err.response.status === 401) {
-        CustomHistory.replace('/login');
-      }
-    }
+// instance.interceptors.response.use(
+//   (res) => res,
+//   async (err) => {
+//     if (err.response) {
+//       // Access Token was expired
+//       if (err.response.status === 401) {
+//         CustomHistory.replace('/login');
+//       }
+//     }
 
-    return Promise.reject(err);
-  }
-);
+//     return Promise.reject(err);
+//   }
+// );
 
 export default instance;

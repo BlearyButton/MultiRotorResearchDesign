@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Button({ children, onclick, buttonClasses }) {
   return (
     <motion.button
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 1 }}
       onClick={onclick}
       whileHover={{ scale: 1 }}
       className={`button ${buttonClasses}`}

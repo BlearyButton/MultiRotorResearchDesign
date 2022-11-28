@@ -16,7 +16,7 @@ export default function DroneCard({ number, status, small, battery, speed, altit
         <p className="name">Drone</p>
         <p className="icon">{number}</p>
         <StatusIndicator status={status} />
-        <p className="route">Inspection round 1</p>
+        <p className="route">Inspection round 5</p>
       </div>
       {!small && (
         <div className="bottom">
