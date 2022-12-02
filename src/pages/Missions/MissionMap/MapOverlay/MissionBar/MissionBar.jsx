@@ -30,7 +30,7 @@ export default function MissionBar() {
           }}
           disabled={window._.some(missions, { name: '' })}
         >
-          <FontAwesomeIcon color="blue" icon={solid('plus')} />
+          <FontAwesomeIcon color="white" icon={solid('plus')} />
         </button>
 
         <div className="cards-grid">

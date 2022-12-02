@@ -1,5 +1,20 @@
 # MRR Drones Dashboard
 
+<br />
+
+## Description
+
+This project entails the dashboard for the MultiRotorResearch Drones. New design changes have been made to perfect the dashboard, and make it more fitting with the target group of MRR.
+
+<br />
+
+### Authors
+
+- Giovanni Smaal
+- Stephanie Bolder
+
+### Build with:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <br />
@@ -9,6 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 System status:
 [![CI](https://github.com/MRR-Drones/dashboard-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/MRR-Drones/dashboard-frontend/actions/workflows/ci.yml)
 [![Deploy](https://github.com/MRR-Drones/dashboard-frontend/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/MRR-Drones/dashboard-frontend/actions/workflows/deploy.yml)
+
 
 <br />
 
