@@ -6,17 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 // Import components
-import StatusIndicator from '../../StatusIndicator/StatusIndicator';
 
 export default function DroneCard({ number, status, small, battery, speed, altitude, timeTravelled }) {
   return (
-    <div className="card">
+    <div className={`dCard ${status}`}>
       <div className="top">
-        <div className={`border-left ${status}`} />
+        <p className={`icon ${status}`}>{number}</p>
         <p className="name">Drone</p>
-        <p className="icon">{number}</p>
-        <StatusIndicator status={status} />
-        <p className="route">Inspection round 5</p>
+        <p className="route">Grass field</p>
       </div>
       {!small && (
         <div className="bottom">

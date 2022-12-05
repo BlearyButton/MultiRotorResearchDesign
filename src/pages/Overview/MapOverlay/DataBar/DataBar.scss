@@ -1,5 +1,123 @@
 @import 'src/styles/variables';
 
+.hidden-data-bar {
+  height: 60px;
+  max-height: 100%;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: $border-radius-10;
+  overflow: hidden;
+
+  .drones {
+    position: absolute;
+    padding: 20px;
+    visibility: visible;
+    width: 260px;
+
+    .dropdowns {
+      display: none;
+      width: max;
+
+      .assigned {
+        display: grid;
+        grid-template-columns: 1fr 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        row-gap: 10px;
+
+        .assignedCards {
+          display: none;
+        }
+      }
+
+      .unAssigned {
+        display: grid;
+        grid-template-columns: 1fr 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        row-gap: 10px;
+
+        .unAssignedCards {
+          display: none;
+        }
+      }
+
+      .titleNames {
+        font-size: medium;
+        font-weight: 600;
+      }
+
+      .iconArrows {
+        margin-top: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+  .data {
+    display: none;
+    position: relative;
+    visibility: hidden;
+
+    .top {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      column-gap: $spacing-012;
+      position: relative;
+
+      .border-left {
+        width: 3px;
+        height: 100%;
+        background-color: rgba($black, 0.15);
+        margin-left: -21px;
+        border-top-right-radius: 999px;
+        border-bottom-right-radius: 999px;
+        position: absolute;
+        left: 0;
+
+        &.active,
+        &.online {
+          background: $green;
+        }
+
+        &.offline {
+          background: $red;
+        }
+      }
+
+      .name {
+        font-weight: $font-weight-demibold;
+        font-size: $font-large;
+      }
+
+      .icon {
+        background-color: $black;
+        color: $white;
+        height: 15px;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        font-size: $font-small;
+        font-weight: $font-weight-demibold;
+      }
+
+      .route {
+        grid-column: 1 / -1;
+      }
+    }
+    .bottom {
+      display: grid;
+      gap: $spacing-012;
+      overflow: auto;
+      max-height: 100%;
+      margin-right: -20px;
+      padding-right: 20px;
+    }
+  }
+}
+
 .data-bar {
   height: fit-content;
   max-height: 100%;
@@ -12,61 +130,111 @@
   display: grid;
   gap: $spacing-032;
   grid-template-rows: auto 1fr;
-  .top {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    column-gap: $spacing-012;
-    position: relative;
 
-    .border-left {
-      width: 3px;
-      height: 100%;
-      background-color: rgba($black, 0.15);
-      margin-left: -21px;
-      border-top-right-radius: 999px;
-      border-bottom-right-radius: 999px;
-      position: absolute;
-      left: 0;
+  .drones {
+    position: absolute;
+    padding: 20px;
+    visibility: visible;
+    width: 260px;
 
-      &.active,
-      &.online {
-        background: $green;
+    .dropdowns {
+      width: max;
+
+      .assigned {
+        display: grid;
+        grid-template-columns: 1fr 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        row-gap: 10px;
+
+        .assignedCards {
+          display: none;
+        }
       }
 
-      &.offline {
-        background: $red;
+      .unAssigned {
+        display: grid;
+        grid-template-columns: 1fr 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        row-gap: 10px;
+
+        .unAssignedCards {
+          display: none;
+        }
       }
-    }
 
-    .name {
-      font-weight: $font-weight-demibold;
-      font-size: $font-large;
-    }
+      .titleNames {
+        font-size: medium;
+        font-weight: 600;
+      }
 
-    .icon {
-      background-color: $black;
-      color: $white;
-      height: 15px;
-      width: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 999px;
-      font-size: $font-small;
-      font-weight: $font-weight-demibold;
-    }
-
-    .route {
-      grid-column: 1 / -1;
+      .iconArrows {
+        margin-top: 2px;
+        cursor: pointer;
+      }
     }
   }
-  .bottom {
-    display: grid;
-    gap: $spacing-012;
-    overflow: auto;
-    max-height: 100%;
-    margin-right: -20px;
-    padding-right: 20px;
+  .data {
+    position: relative;
+    visibility: hidden;
+
+    .top {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      column-gap: $spacing-012;
+      position: relative;
+
+      .border-left {
+        width: 3px;
+        height: 100%;
+        background-color: rgba($black, 0.15);
+        margin-left: -21px;
+        border-top-right-radius: 999px;
+        border-bottom-right-radius: 999px;
+        position: absolute;
+        left: 0;
+
+        &.active,
+        &.online {
+          background: $green;
+        }
+
+        &.offline {
+          background: $red;
+        }
+      }
+
+      .name {
+        font-weight: $font-weight-demibold;
+        font-size: $font-large;
+      }
+
+      .icon {
+        background-color: $black;
+        color: $white;
+        height: 15px;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        font-size: $font-small;
+        font-weight: $font-weight-demibold;
+      }
+
+      .route {
+        grid-column: 1 / -1;
+      }
+    }
+    .bottom {
+      display: grid;
+      gap: $spacing-012;
+      overflow: auto;
+      max-height: 100%;
+      margin-right: -20px;
+      padding-right: 20px;
+    }
   }
 }
