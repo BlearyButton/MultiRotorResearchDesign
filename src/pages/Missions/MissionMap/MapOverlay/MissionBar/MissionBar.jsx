@@ -13,7 +13,7 @@ export default function MissionBar() {
       <>
         <button
           type="button"
-          className="button add-mission fullwidth"
+          className="add-mission fullwidth missions-button"
           onClick={() => {
             const newMissions = JSON.parse(JSON.stringify(missions));
 

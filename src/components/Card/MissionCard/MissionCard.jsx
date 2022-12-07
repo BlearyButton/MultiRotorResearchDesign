@@ -265,7 +265,7 @@ export default function MissionCard({ missionId }) {
               )}
 
               <Button
-                buttonClasses="fullwidth green"
+                buttonClasses="fullwidth green buttonsavedelete"
                 onclick={() => {
                   saveMission();
                 }}
@@ -274,7 +274,7 @@ export default function MissionCard({ missionId }) {
               </Button>
 
               <Button
-                buttonClasses="red fullwidth"
+                buttonClasses="red fullwidth buttonsavedelete"
                 onclick={() => {
                   if (window.confirm('Are you sure you want to remove the mission?')) {
                     removeMission();
