@@ -73,6 +73,13 @@ export default function SideNav() {
               <FontAwesomeIcon icon={regular('bullseye-arrow')} />
             )}
           </NavItem>
+          <NavItem link="/schedule">
+            {location.pathname === '/schedule' ? (
+              <FontAwesomeIcon icon={solid('calendar-days')} />
+            ) : (
+              <FontAwesomeIcon icon={regular('calendar-days')} />
+            )}
+          </NavItem>
           <NavItem link="/testpage">
             {location.pathname === '/testpage' ? (
               <FontAwesomeIcon icon={solid('cog')} />

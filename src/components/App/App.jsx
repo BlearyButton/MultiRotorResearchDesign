@@ -16,6 +16,7 @@ import Login from '../../pages/Login/Login';
 import Missions from '../../pages/Missions/Missions';
 import CustomRouter from '../../custom/CustomRouter';
 import CustomHistory from '../../custom/CustomHistory';
+import Schedule from '../../pages/Schedule/Schedule';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/overview" element={<Overview />} />
           <Route path="/testpage" element={<TestPage />} />
           <Route path="/missions" element={<Missions />} />
+          <Route path="/schedule" element={<Schedule />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </CustomRouter>
