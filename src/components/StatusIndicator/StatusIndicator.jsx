@@ -5,7 +5,6 @@ export default function StatusIndicator({ status }) {
   return (
     <div className="StatusIndicator">
       <div className={`indicator ${status}`} />
-      <p>{status}</p>
     </div>
   );
 }

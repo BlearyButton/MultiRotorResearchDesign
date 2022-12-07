@@ -1,44 +1,34 @@
 @import '../../../styles/variables';
 
-.card {
+.dCard {
   background-color: $white;
-  padding: 20px;
-  border-radius: $border-radius-10;
-  border: 1px solid $light-gray;
+  border-radius: 8px;
+  border: 0.5px solid lightgray;
   max-width: 100%;
   display: grid;
   gap: $spacing-024;
+  margin-bottom: 6px;
+
+  &.online {
+    :hover {
+      background-color: $blue;
+      border-radius: 8px;
+      color: white;
+    }
+  }
 
   .top {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr 8fr 7fr;
     align-items: center;
     column-gap: $spacing-012;
     position: relative;
-
-    .border-left {
-      width: 3px;
-      height: 100%;
-      background-color: rgba($black, 0.15);
-      margin-left: -20px;
-      border-top-right-radius: 999px;
-      border-bottom-right-radius: 999px;
-      position: absolute;
-      left: 0;
-
-      &.active,
-      &.online {
-        background: $green;
-      }
-
-      &.offline {
-        background: $red;
-      }
-    }
+    padding: 4px;
 
     .name {
       font-weight: $font-weight-demibold;
       font-size: $font-large;
+      width: 1%;
     }
 
     .icon {
@@ -52,10 +42,21 @@
       border-radius: 999px;
       font-size: $font-small;
       font-weight: $font-weight-demibold;
+
+      &.active,
+      &.online {
+        background: $green;
+      }
+
+      &.offline {
+        background: $red;
+      }
     }
 
     .route {
-      grid-column: 1 / -1;
+      position: absolute;
+      right: 0px;
+      margin-right: 4px;
     }
   }
 }
