@@ -42,7 +42,6 @@ export default function Schedule() {
 
     return (
         <PageWrapper>
-
             <span className="headingschedule">
                 <h2>Schedule</h2>
             </span>
@@ -60,11 +59,11 @@ export default function Schedule() {
             />
             <div className='dragdropinformation'>
                 <div className='dragdroplargeinformation'>
-                Missions
+                    Missions
                 </div>
                 <div className='dragdropsmallinformation'>
-                Drag & drop the missions into your schedule
-                    </div>
+                    Drag & drop the missions into your schedule
+                </div>
             </div>
             <div>
                 <div
