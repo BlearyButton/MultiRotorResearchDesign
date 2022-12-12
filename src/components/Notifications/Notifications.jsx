@@ -8,57 +8,33 @@ export default function Notifications() {
   const data = [
     {
       id: 1,
-      messageTitle: 'titeltje 1',
+      messageTitle: 'Drone is offline',
       message: 'message',
       messageType: 'warning',
     },
     {
       id: 2,
-      messageTitle: 'titeltje 2',
+      messageTitle: 'Mission grassfield is done',
       message: 'message 2',
-      messageType: 'error',
+      messageType: 'check',
     },
     {
       id: 3,
-      messageTitle: 'titeltje 3',
+      messageTitle: 'Mission farmhouse is done',
       message: 'message 3',
       messageType: 'check',
     },
     {
       id: 4,
-      messageTitle: 'titeltje 1',
+      messageTitle: 'Mission test is cancelled',
       message: 'message',
       messageType: 'warning',
     },
     {
       id: 5,
-      messageTitle: 'titeltje 2',
-      message: 'message 2',
-      messageType: 'error',
-    },
-    {
-      id: 6,
-      messageTitle: 'titeltje 3',
-      message: 'message 3',
-      messageType: 'check',
-    },
-    {
-      id: 7,
-      messageTitle: 'titeltje 1',
+      messageTitle: 'Mission is not yet assigned',
       message: 'message',
-      messageType: 'warning',
-    },
-    {
-      id: 8,
-      messageTitle: 'titeltje 2',
-      message: 'message 2',
       messageType: 'error',
-    },
-    {
-      id: 9,
-      messageTitle: 'titeltje 3',
-      message: 'message 3',
-      messageType: 'check',
     },
   ];
 
