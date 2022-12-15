@@ -84,6 +84,11 @@ export default function DataBar({ realTimeData, number = 1, status = 'online' })
     document.getElementById('drones').style.visibility = 'hidden';
   };
 
+  const dataButton = () => {
+    document.getElementById('data').style.visibility = 'hidden';
+    document.getElementById('drones').style.visibility = 'visible';
+  };
+
   const hideBar = () => {
     const dataBar = document.getElementById('data-bar');
     if (dataBar.className === 'data-bar') {
@@ -134,12 +139,13 @@ export default function DataBar({ realTimeData, number = 1, status = 'online' })
       <div id="data" className="data">
         <div className="top">
           <div className={`border-left ${status}`} />
+          <FontAwesomeIcon className="iconArrowLeft" onClick={dataButton} icon={regular('caret-left')} />
           <p className="name">Drone</p>
           <p className="icon">{number}</p>
           <StatusIndicator number={2} status={status} />
           <p className="route">Grass field</p>
         </div>
-        <div className="bottom">
+        <div className="bottom" id="bottomGap">
           {data.map((item) => (
             <DataItem key={item.id} icon={item.icon} title={item.title} data={item.data} dataUnit={item.dataUnit} />
           ))}
