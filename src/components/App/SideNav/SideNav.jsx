@@ -52,12 +52,15 @@ export default function SideNav() {
           </Link>
         </div>
         <div className="middle">
-          <NavItem link="/">
+          {/* <NavItem link="/">
             {location.pathname === '/' ? (
               <FontAwesomeIcon icon={solid('chart-tree-map')} />
             ) : (
               <FontAwesomeIcon icon={regular('chart-tree-map')} />
             )}
+          </NavItem> */}
+          <NavItem>
+            <NotificationsBell />
           </NavItem>
           <NavItem link="/overview">
             {location.pathname === '/overview' ? (
@@ -92,7 +95,7 @@ export default function SideNav() {
           <Logout />
           <Weather />
           <Clock />
-          <NotificationsBell />
+          {/* <NotificationsBell /> */}
         </div>
       </div>
     </SideNavContext.Provider>

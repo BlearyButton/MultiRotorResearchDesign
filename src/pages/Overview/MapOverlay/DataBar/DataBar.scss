@@ -181,7 +181,7 @@
 
     .top {
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: auto auto 4fr auto;
       align-items: center;
       column-gap: $spacing-012;
       position: relative;
@@ -211,6 +211,10 @@
         font-size: $font-large;
       }
 
+      .iconArrowLeft {
+        cursor: pointer;
+      }
+
       .icon {
         background-color: $black;
         color: $white;
@@ -235,6 +239,9 @@
       max-height: 100%;
       margin-right: -20px;
       padding-right: 20px;
+    }
+    #bottomGap {
+      margin-top: 12px;
     }
   }
 }

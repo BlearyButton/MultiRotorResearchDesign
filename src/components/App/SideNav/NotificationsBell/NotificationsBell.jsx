@@ -53,7 +53,7 @@ export default function NotificationsBell() {
         onClose={() => {
           setNotificationsTooltipOpen(false);
         }}
-        position="bottom"
+        position="top"
       >
         <div className="heading">
           <h3>Notifications</h3>
